@@ -5,14 +5,14 @@
  * unmount() — отписывается (но файлы в state остаются)
  */
 
-import * as state    from './state.js';
-import * as eventBus from './eventBus.js';
-import { setPreviewUrl, revokeAll } from './memory.js';
-import { downloadZip }              from './download.js';
-import { initDropZone }             from './DropZone.js';
-import { createFileCard, updateFileCard } from './FileCard.js';
-import { initSlider }               from './Slider.js';
-import './compress.js'; // регистрирует обработчики file:added / settings:changed
+import * as state    from '../state.js';
+import * as eventBus from '../eventBus.js';
+import { setPreviewUrl, revokeAll } from '../memory.js';
+import { downloadZip }              from '../download.js';
+import { initDropZone }             from '../DropZone.js';
+import { createFileCard, updateFileCard } from '../FileCard.js';
+import { initSlider }               from '../Slider.js';
+import '../compress.js'; // регистрирует обработчики file:added / settings:changed
 
 // Отписчики — сохраняем чтобы убрать при unmount
 const _unsubs = [];
